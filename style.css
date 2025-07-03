@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    color: #cccac6;
+    background-color: #141414;
+}
+
+.main {
+    background-image: url(images/main-background.png);
+    height: 80vh;
+    background-size: cover;
+    position: relative;
+    display: flex;
+}
+
+.main-logo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    margin-left: 100px;
+    gap: 20px;
+}
+
+.main-logo img {
+    width: 300px;
+}
+
+.main-logo h1 {
+    color: #cccac6;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 0.9em;
+    max-width: 600px;
+}
+
+.main-logo p {
+    color: #cccac6;
+    max-width: 550px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.main-logo button {
+    font-size: 16px;
+    padding: 15px 20px;
+    background-color: #b9955a;
+    border: none;
+    border-radius: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.statue {
+    flex: 1;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+
+    overflow: hidden;
+}
+
+.statue img {
+    width: 30vw;
+}
+
+h1 {
+
+    color: #b9955a;
+    font-family: "Cormorant SC", serif;
+}
+
+h2 {
+    color: #b9955a;
+}
+
+p {
+    font-family: sans-serif;
+    /* color: black; */
+}
+
+
+
+.atuacao {
+    padding: 5vh 0;
+    max-width: 100vw;
+    text-align: center;
+    background-color: #cccac6;
+}
+
+.atuacao>h1 {
+    font-size: 35px;
+    max-width: 600px;
+    margin: 20px auto auto auto;
+}
+
+.card-elements {
+    padding: 10vh 0;
+    width: 70vw;
+    margin: auto;
+    display: grid;
+    grid-template: 1fr/ 1fr 1fr 1fr;
+    gap: 20px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.322);
+}
+
+.card-element {
+    height: 15vw;
+    border-radius: 10px;
+    background-image: url(images/model-exemple.jpg);
+    background-size: cover;
+
+    display: flex;
+    align-items: end;
+    justify-content: start;
+
+    position: relative;
+}
+
+.card-element::before {
+    content: '';
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+    z-index: 0;
+}
+
+.card-element>* {
+    position: relative;
+    z-index: 1;
+}
+
+.card-element:hover::before {
+    background-color: #0000004b;
+    cursor: pointer;
+}
+
+.card-element:hover .card-element-content {
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+.card-element-content {
+    max-width: 200px;
+    padding: 8%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: .3s ease;
+    align-items: start;
+}
+
+.card-element-content h1 {
+    color: #f1e8da;
+    text-align: start;
+    font-size: 30px;
+    margin: 0;
+    line-height: 0.9em;
+}
+
+.container {
+    background-color: #cccac6;
+}
+
+
+.offer {
+    padding: 10vh 0;
+    width: 50vw;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    gap: 50px;
+
+    background-color: #cccac6;
+
+}
+
+.offer-txt {
+    min-width: 500px;
+    color: black;
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.offer-txt h2 {
+    font-size: 30px;
+}
+
+
+.offer-img {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer-img img {
+    width: 500px;
+}
+
+.about {
+    padding: 10vh 0;
+    max-width: 100vw;
+    color: #cccac6;
+    background-color: #141414;
+    text-align: center;
+}
+
+.about-content {
+    text-align: justify;
+    width: 600px;
+    margin: 10px auto auto auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+.about-content ul{
+    text-align: left;
+}
+
+.about h1 {
+    font-size: 35px;
+    width: 600px;
+    margin: auto;
+    color: #cccac6;
+}
+
+.price {
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: content;
+    gap: 20px;
+    padding: 100px 0;
+}
+
+.price h1{
+    font-size: 35px;
+}
+
+.price>div{
+    display: flex;
+    gap: 20px;
+}
+
+.price>div img{
+width: 220px;
+}
+
+.price-content {
+    width: 300px;
+    height: auto;
+    border: 1px solid #b9945a80;
+    border-radius: 25px;
+    margin: auto;
+    padding: 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-element{
+    padding: 10px 0;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-list{
+text-align: left;
+margin-left: 5px;
+}
+
+.price button{
+    font-size: 16px;
+    padding: 15px 20px;
+    background-color: #b9955a;
+    border: none;
+    border-radius: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.faq {
+    display: flex;
+    width: 100vw;
+    background-color: rgb(31, 31, 31);
+    border-radius: 50px 50px 0 0;
+    padding: 100px;
+    box-sizing: border-box;
+
+    background-color: #cccac6;
+}
+
+
+
+
+
+
+
+.bullets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 0;
+
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+
+    .main-logo {
+        padding-top: 70px;
+        max-width: 50vw;
+        margin-right: auto;
+    }
+
+    .statue {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .statue img {
+        width: 600px;
+    }
+
+}
+
+
+@media (max-width: 970px) {
+
+    .main-logo {
+        padding: 70px 0 0 70px;
+    }
+
+    .statue img {
+        width: 500px;
+    }
+}
+
+@media (max-width: 815px) {
+
+    .main {
+        height: 110vh;
+    }
+
+    .main-logo {
+        padding: 0 0 10vh 0;
+        max-width: 100vw;
+        z-index: 100;
+    }
+
+    .main-logo h1 {
+        text-shadow: 2px 2px 3px black;
+    }
+
+    .statue img {
+        width: 450px;
+        opacity: 0.6;
+    }
+}
+
+@media (max-width: 710px) {
+
+    .main-logo h1 {
+        font-size: 27px;
+    }
+
+    .statue img {
+        width: 420px;
+    }
+}
+
+@media (max-width: 560px) {
+
+
+    .main {
+        height: 100vh;
+    }
+
+    .main-logo {
+        padding: 0 0 20vh 0;
+    }
+
+    .main-logo img {
+        width: 280px;
+    }
+
+    .main-logo h1 {
+        font-size: 24px;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.178);
+    }
+
+    .main-logo button {
+        font-size: 14px;
+    }
+
+    .statue img {
+        width: 380px;
+        opacity: 0.6;
+    }
+}
+
+@media (max-width:375px) {
+    .main {
+        height: 110vh;
+    }
+
+    .statue img {
+        width: 350px;
+    }
+}
